@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c437d558dd8846d4e83c36866aa6aee1, type: 3}
+  m_Name: 01 Barbarian
+  m_EditorClassIdentifier: 
+  CardName: Barbarian
+  CardIcon: {fileID: 21300000, guid: 3885ea316ed069b4cb0e7e47034f22a0, type: 3}
+  CardHealth: 8
+  CardCost: 5
+  CardWalkDistance: 1
+  CardDamage: 1
+  CardAttackDistance: 1
+  CharacterPrefab: {fileID: 1982540529065538881, guid: 8a3adff372ec3f243a4b09cbb51463c7, type: 3}
