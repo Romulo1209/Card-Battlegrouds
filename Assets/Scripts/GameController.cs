@@ -182,8 +182,10 @@ public class GameController : MonoBehaviour
     public void SpawnCharacter(CellGrid cell, CardScriptable currentCard, Players spawnerOwner) {
         var mana = spawnerOwner == Players.Player ? PlayerController.Mana : BotController.Mana;
         if (currentCard == null || !SpawnInRightCell(spawnerOwner, cell) || mana < currentCard.CardCost || cell.ActualCard != null || spawnerOwner != nextToPlay) {
-            if(spawnerOwner == Players.Player) 
+            if(spawnerOwner == Players.Player) {
                 PlayerController.CurrentCard = null;
+                PlayerController.ActualCardUI = null;
+            } 
             return;
         } 
 
@@ -197,6 +199,7 @@ public class GameController : MonoBehaviour
             PlayerController.Mana = PlayerController.Mana - currentCard.CardCost;
             UIController.UpdateHUD(PlayerController.Mana, GameController.instance.Round, nextToPlay);
             PlayerController.CurrentCard = null;
+            PlayerController.ActualCardUI = null;
             playerCharacters.Add(character.GetComponent<CharacterBase>());
         }
         else {

@@ -37,11 +37,11 @@ public class CardUIBase : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     }
 
     public void OnPointerUp(PointerEventData eventData) {
-        GameController.instance.PlayerController.SelectCard(card, this);
+       
     }
 
     public void OnPointerDown(PointerEventData eventData) {
-        
+        GameController.instance.PlayerController.SelectCard(card, this);
     }
 
     public void SelectCard() {
