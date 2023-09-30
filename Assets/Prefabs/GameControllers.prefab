@@ -1,0 +1,236 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &767923485881226094
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7823787189720677510}
+  m_Layer: 0
+  m_Name: Units
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7823787189720677510
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 767923485881226094}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 7.5741754, y: 9.296962, z: -8.714464}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3376118258714942283}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3605048738984850166
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3376118258714942283}
+  - component: {fileID: 3875306626487394388}
+  - component: {fileID: 5644497601426334315}
+  - component: {fileID: 3428854741158253982}
+  - component: {fileID: 383590005414014760}
+  - component: {fileID: 6803168752531931545}
+  - component: {fileID: 1890768494097783149}
+  m_Layer: 0
+  m_Name: GameControllers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3376118258714942283
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3605048738984850166}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.5741754, y: -9.296962, z: 8.714464}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3595130987600688757}
+  - {fileID: 7823787189720677510}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3875306626487394388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3605048738984850166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a764fbb5e7c09f44180f7a0206aa359d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actualState: 0
+  nextToPlay: 0
+  round: 0
+  queueOrder: []
+  player1Life: 15
+  playerCharacters: []
+  player2Life: 15
+  enemyCharacters: []
+  charactersFather: {fileID: 7823787189720677510}
+  gridController: {fileID: 383590005414014760}
+  uiController: {fileID: 6803168752531931545}
+  windowController: {fileID: 1890768494097783149}
+  playerController: {fileID: 5644497601426334315}
+  botController: {fileID: 3428854741158253982}
+--- !u!114 &5644497601426334315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3605048738984850166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57a76d98152413148a52e7818f3110bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialMana: 3
+  actualMana: 3
+  manaLimit: 10
+  actualDeck:
+  - {fileID: 11400000, guid: 2e6e69f83a421934bbd5d77fbf2ca357, type: 2}
+  - {fileID: 11400000, guid: 258465bb84038d8479ff00cf10b360a9, type: 2}
+  - {fileID: 11400000, guid: b485e58263a0680429e0dd7c57529961, type: 2}
+  - {fileID: 11400000, guid: c71fcac6e0645c14c98369ff7a80bf8f, type: 2}
+  gridLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  actualCardUI: {fileID: 0}
+--- !u!114 &3428854741158253982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3605048738984850166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b9f7d3bc724c924d921c3c1737caeb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialMana: 3
+  actualMana: 3
+  manaLimit: 10
+  actualDeck:
+  - {fileID: 11400000, guid: 258465bb84038d8479ff00cf10b360a9, type: 2}
+  - {fileID: 11400000, guid: c71fcac6e0645c14c98369ff7a80bf8f, type: 2}
+--- !u!114 &383590005414014760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3605048738984850166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 386edacfa2bd6fd41a4af09af526be11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridSize: {x: 10, y: 2}
+  gridZones:
+    PlayerGrid: {x: 0, y: 2}
+    EnemyGrid: {x: 7, y: 9}
+  cellColors:
+    Neutral: {r: 0.2264151, g: 0.2264151, b: 0.2264151, a: 1}
+    Player: {r: 0, g: 0.7264151, b: 0.6258844, a: 1}
+    Enemy: {r: 0.6574646, g: 0, b: 0.6698113, a: 1}
+    NeutralHoverColor: {r: 1, g: 0.866093, b: 0.3915094, a: 1}
+    PlayerHoverTiles: {r: 0.5234004, g: 1, b: 0, a: 1}
+    EnemyHoverTiles: {r: 1, g: 0, b: 0, a: 1}
+  castlePrefab: {fileID: 6465067461936590695, guid: 150a00082094bb8448752e58ed13f778, type: 3}
+  gridCubePrefab: {fileID: 6867507026141175306, guid: c2782bd932effda4f9e408184997cc64, type: 3}
+  gridParent: {fileID: 3595130987600688757}
+--- !u!114 &6803168752531931545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3605048738984850166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: befeac6671c33374cb1c5d994ff04f1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTurnText: {fileID: 0}
+  manaText: {fileID: 0}
+  roundText: {fileID: 0}
+  troopInfos: {fileID: 0}
+  handTransform: {fileID: 0}
+  headerText: {fileID: 0}
+  highScore: {fileID: 0}
+  scoreText: {fileID: 0}
+  cardBase: {fileID: 3777642681070153652, guid: ee3cc7a610f6ea745b7153d5c0255dbb, type: 3}
+  windows:
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!114 &1890768494097783149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3605048738984850166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3de8f5d56fffd294b9a9940c4013d217, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windows:
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!1 &7523224873963270517
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3595130987600688757}
+  m_Layer: 0
+  m_Name: GridParent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3595130987600688757
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7523224873963270517}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 7.5741754, y: 9.296962, z: -8.714464}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3376118258714942283}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

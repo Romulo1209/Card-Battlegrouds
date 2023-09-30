@@ -7,16 +7,20 @@ public class CameraController : MonoBehaviour
     [SerializeField] float moveSpeed;
     [SerializeField] Vector2 cameraLimit;
 
-    private void Start()
-    {
+    float movX;
+
+    private void Start() {
         cameraLimit = new Vector2(0, GameController.instance.GridController.GridSize.x);
+    }
+    private void Update() {
+        movX = Input.GetAxis("Horizontal");
     }
     private void FixedUpdate() {
         if (GameController.instance.ActualState == GameState.GameOver)
             return;
 
-        if (Input.mousePosition.x >= Screen.width * 0.975f || Input.mousePosition.x <= Screen.width * 0.025f) {
-            if(Input.mousePosition.x - Screen.width * 0.5 > 0) {
+        if (movX != 0 || Input.mousePosition.x >= Screen.width * 0.975f || Input.mousePosition.x <= Screen.width * 0.025f) {
+            if (movX > 0 || Input.mousePosition.x - Screen.width * 0.5 > 0 && movX == 0) {
                 if (transform.position.x >= cameraLimit.y)
                     return;
                 Move(1);
