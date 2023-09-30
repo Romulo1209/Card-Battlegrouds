@@ -2,14 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WindowBase : MonoBehaviour {
-    public string windowName;
+public class WindowBase : MonoBehaviour
+{
+    public string windowName; // Nome da janela, pode ser usado para identificar a janela
 
     public void OpenWindow() {
-        gameObject.SetActive(true);
+        gameObject.SetActive(true); // Ativa o objeto (janela) associado a esta classe
     }
 
     public void CloseWindow() {
-        gameObject.SetActive(false);
+        gameObject.SetActive(false); // Desativa o objeto (janela) associado a esta classe
     }
 }

@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class WindowController : MonoBehaviour
 {
-    [SerializeField] List<WindowBase> windows;
+    [SerializeField] List<WindowBase> windows; // Uma lista de janelas que podem ser gerenciadas
 
     #region Window Management
 
     public void CloseAllWindows() {
         foreach (WindowBase window in windows) {
-            window.CloseWindow();
+            window.CloseWindow(); // Fecha todas as janelas na lista
         }
     }
 
     public void OpenWindow(string windowName) {
-        CloseAllWindows();
+        CloseAllWindows(); // Fecha todas as janelas antes de abrir uma específica
         foreach (WindowBase window in windows) {
             if (window.windowName == windowName) {
-                window.OpenWindow();
+                window.OpenWindow(); // Abre a janela com o nome correspondente
                 return;
             }
         }
